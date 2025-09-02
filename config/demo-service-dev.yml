@@ -1,0 +1,4 @@
+example:
+  property: Hello World(DEV)
+  name: 홍길동
+  password: "{cipher}0c0de6b8272f56ae37bb2dc0b4e826b07f5bd7bdad649a43d9e1bbfb0c71c3a5"

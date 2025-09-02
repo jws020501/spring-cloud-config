@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/web
+    username: "{cipher}0c0de6b8272f56ae37bb2dc0b4e826b07f5bd7bdad649a43d9e1bbfb0c71c3a5"
+    password: "{cipher}3a5b17bbd2918d646c31143e4811c1ebff1df813bd4cb0db89dac74753a35d76"
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: "{cipher}600468775b26312aa5fd23c796f88ec2891be8d5de0199eb5c8f733d6f725b13"
+mybatis:
+  type-aliases-package: com.beyond.university.*.model.vo
+  mapper-locations:
+    - classpath:mappers/**/*.xml
+  configuration:
+    jdbc-type-for-null: NULL
+springdoc:
+  swagger-ui:
+    operations-sorter: method
+  paths-to-match:
+    - /api/v1/**
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defalue-zone: http://localhost:8761/eureka/
+jwt:
+  issuer: https://accounts.beyond.com
+  secret: "{cipher}eb5891e247b2fca27740f07248a15d4c562355ebfb6dea632e58f7f70c89116f4f51968f7101c5bec29362d52811fe1ce2a559c1ccaf0d4d0f0362ffc841ca5f"
